@@ -1,3 +1,8 @@
+import 'package:digital_business_card/page/a.dart';
+import 'package:digital_business_card/page/editProfile.dart';
+import 'package:digital_business_card/page/profile.dart';
+import 'package:digital_business_card/page/setup.dart';
+import 'package:digital_business_card/page/test.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,7 +29,13 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      routes: {
+        "/":(context) => test(),
+        "/edit":(context) => Edit_Page(),
+        '/setup':(context) => Setup(),
+        '/a':(context) => a()
+      },
+      debugShowCheckedModeBanner: false,
     );
   }
 }
